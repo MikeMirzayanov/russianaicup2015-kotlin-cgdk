@@ -75,6 +75,10 @@ class Car(
          */
         val wheelTurn: Double,
         /**
+         * @return Возвращает индекс следующего ключевого тайла в массиве {@code world.waypoints}.
+         */
+        val nextWaypointIndex: Int,
+        /**
          * @return Возвращает компоненту X позиции следующего ключевого тайла.
          * Конвертировать позицию в точные координаты можно, используя значение `game.trackTileSize`.
          */
