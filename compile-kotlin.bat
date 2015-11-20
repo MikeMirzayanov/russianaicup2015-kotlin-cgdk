@@ -3,8 +3,8 @@
 rd /Q /S classes
 md classes
 
-call %KOTLIN_HOME%\bin\kotlinc.bat src/main/java -d classes
-javac -cp classes;%KOTLIN_HOME%\lib\kotlin-runtime.jar -encoding UTF-8 -sourcepath "src/main/java" -d classes "src/main/java/Runner.java" > compilation.log
+call "%KOTLIN_HOME%\bin\kotlinc.bat" src/main/java -d classes
+javac -cp "classes;%KOTLIN_HOME%\lib\kotlin-runtime.jar" -encoding UTF-8 -sourcepath "src/main/java" -d classes "src/main/java/Runner.java" > compilation.log
 echo %CLASSPATH%
 
 if not exist classes\Runner.class (

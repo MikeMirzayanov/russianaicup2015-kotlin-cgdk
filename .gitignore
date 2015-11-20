@@ -1,5 +1,7 @@
+*.class
 .idea/workspace.xml
 /target
+/out
 /classes
 /compilation.log
 /kotlin-cgdk.jar

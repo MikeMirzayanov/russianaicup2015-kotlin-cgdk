@@ -4,7 +4,7 @@ rm -rf classes
 mkdir classes
 
 kotlinc src/main/java -d classes
-javac -cp classes:$(dirname $(which kotlinc))/../lib/kotlin-runtime.jar -sourcepath "src/main/java" -d classes "src/main/java/Runner.java" > compilation.log
+javac -cp "classes:$(dirname $(which kotlinc))/../lib/kotlin-runtime.jar" -sourcepath "src/main/java" -d classes "src/main/java/Runner.java" > compilation.log
 
 if [ ! -f classes/Runner.class ]
 then
